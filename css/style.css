@@ -1,0 +1,141 @@
+:root{
+    --main-font: 'Poppins', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+body{
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    background: rgb(142, 143, 81);
+}
+
+button{
+    border: none;
+}
+
+h1{
+    font-size: 52px;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.main__form {
+    padding: 50px 10px 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.main__input {
+    font-family: var(--main-font);
+    font-size: 1rem;
+    flex:1;
+    padding: 20px;
+    border-radius: 0.7em;
+    border: none;
+}
+
+.main__input::placeholder{
+    font-size: 1rem;
+    font-family: var(--main-font);
+}
+
+.main__add-btn{
+    padding: 20px;
+    color: white;
+    background: rgb(2, 32, 2);
+    border-radius: 0.5em;
+    margin: 0 10px;
+}
+
+.main__add-btn:hover{
+    border: 1px solid black;
+}
+
+.main__filter{
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    width: 10rem;
+    padding: 15px;
+}
+
+.main__todos{
+    padding:20px 10px 0 10px;
+    flex-wrap: wrap;
+}
+
+.main__todo{
+    display: flex;
+    background: white;
+    padding: 15px;
+    border-radius: 0.5rem;
+    margin: 10px 0;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+    flex:1 1;
+}
+
+.main__todo-text{
+    flex: 1;
+    word-break: break-all;
+}
+
+.todo-done{
+    background: rgb(114, 214, 114);
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.main__done-btn{
+    width: 30px;
+    height: 30px;
+    background:url('../icons/check-icon.png') center center/cover no-repeat;
+    cursor: pointer;
+}
+
+.main__delete-btn{
+    width: 30px;
+    height: 30px;
+    background:url('../icons/trash-icon.png') center center/cover no-repeat;
+    cursor: pointer;
+}
+
+.disappear {
+    opacity: 0;
+}
+
+@media screen and (max-width:550px) {
+    .main__form{
+        flex-direction: column;
+    }
+
+    .main__filter,.main__add-btn,.main__input{
+        margin: 10px 0;
+        width: 100%;
+    }
+
+}
